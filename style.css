@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+}
+body {
+    height: 100vh;
+    background: #00000033;
+}
+header {
+    width: 100%;
+    position: relative;
+}
+.header-content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    color: #ffffff;
+}
+.header-content :last-child {
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 5px 8px;
+    margin-left: 10px;
+    background-color: #95AAD0;
+}
+.header-background {
+    position: absolute;
+    top: 0;
+    background: url(img/background-image@2x.png);
+    background-position: top;
+    width: 100%;
+    height: 250px;
+    z-index: -1;
+}
+main {
+    display: flex;
+    z-index: 1;
+    width: 95%;
+    height: calc(95vh - 83px);
+    margin: auto;
+    border-radius: 15px;
+    background-color: #ffffff;
+}
+.box-products {
+    width: 50%;
+    height: 100%;
+    background-color: #e0e4e8;
+    border-radius: 15px 0 0 15px ;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.products {
+    display: flex;
+    width: 100%;
+    height: 100px;
+    margin-bottom: 20px;
+}
+.products-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border: 1px solid #00000033;
+    width: 100px;
+    height: 100px;
+    background-color: #F3F4F6;
+}
+.products-img img {
+    height: 90%;
+    padding: 10px;
+}
+.products-info {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    margin-left: 25px;
+}
+.products-info small {
+    margin-top: auto;
+}
+.products-price {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.products-price small{
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.small_text {
+    color: #757B88;
+    font-weight: 600;
+}
+.coupon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.coupon form {
+    display: flex;
+    gap: 5px;
+    margin: 20px 0;
+    width: 100%;
+}
+.coupon form input {
+    height: 50px;
+    flex-grow: 6;
+    padding: 10px;
+    border: 1px solid #00000033;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+}
+.coupon form button {
+    flex-grow: 1;
+    font-size: 15px;
+    font-weight: 600;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    background-color: black;
+    color: #ffffff;
+}
+.cuenta {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+.cuenta-contadores {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    gap: 10px;
+    flex-basis: 200px;
+}
+.cuenta-money {
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+    gap: 10px;
+}
+.box-contact {
+    width: 50%;
+    height: 100%;
+    background-color: #ffffff;
+    border-radius: 0 15px 15px 0;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+}
+.box-contact h3 {
+    margin-bottom: 20px;
+}
+.contact {
+    display: flex;
+    flex-direction: column;
+}
+.box-contact_container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.contact.Country,
+.contact.PostalCode {
+    width: 48%;
+}
+.box-contact select {
+    width: 100%;
+    height: 60px;
+    border: 1px solid #00000033;
+    border-radius: 5px;
+    outline: none;
+    background: #F3F4F6;
+    font-size: 17px;
+    padding: 15px;
+    margin: 10px 0;
+}
+.box-contact input {
+    width: 100%;
+    height: 60px;
+    border: 1px solid #00000033;
+    border-radius: 5px;
+    outline: none;
+    background: #F3F4F6;
+    font-size: 17px;
+    padding: 15px;
+    margin: 10px 0;
+}
+.box-contact label {
+    margin-top: 10px;
+    color: #757B88;
+    font-weight: 600;
+}
+.box-contact button {
+    width: 100%;
+    height: 50px;
+    margin-top: 20px;
+    font-size: 15px;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    background-color: black;
+    color: #ffffff;
+}
+
+/** RESPONSIVE DESING **/
+@media (max-width:768px){
+    main {
+        flex-direction: column;
+    }
+    .box-products {
+        width: 100%;
+        height: auto;
+        border-radius: 15px 15px 0 0;
+        padding: 20px;
+        overflow:visible;
+    }
+    .box-contact {
+        width: 100%;
+        height: auto;
+        border-radius: 0px 0px 15px 15px;
+    }
+}
+@media (max-height:700px){
+    main {
+    height: auto;
+    }
+}
